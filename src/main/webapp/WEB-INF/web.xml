@@ -1,0 +1,5 @@
+<web-app xmlns="http://xlmns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xlmns.jcp.org/xml/ns/javaee http://xlmns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+    version="4.0">
+</web-app>
