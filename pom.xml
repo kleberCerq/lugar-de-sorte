@@ -8,6 +8,7 @@
     <groupId>com.lugar-de-sorte</groupId>
     <artifactId>lugar-de-sorte</artifactId>
     <version>1.0.0</version>
+    <packaging>war</packaging>
     <name>Lugar de Sorte - Aplicação web de sorteios</name>
     <url>https://github.com/kleberCerq/lugar-de-sorte</url>
 
