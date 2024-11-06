@@ -1,6 +1,7 @@
 package control;
 import java.util.List;
 
+import model.Cliente;
 public interface ISistemaEmpresa {
 
       public void excluirSorteio();

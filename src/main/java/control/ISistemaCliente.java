@@ -1,6 +1,8 @@
 package control;
 import java.util.List;
 
+import model.Bilhete;
+
 public interface ISistemaCliente {
     
       public List<String> estabelecimentosProximos();
