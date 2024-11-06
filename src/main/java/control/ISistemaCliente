@@ -1,0 +1,12 @@
+package control;
+import java.util.List;
+
+public interface ISistemaCliente {
+    
+      public List<String> estabelecimentosProximos();
+	  public Bilhete comprarBilhetes();
+	  public void avaliacaoEmpresa();
+	  public void historicoSorteios();
+      public void acessarDados();
+
+	}

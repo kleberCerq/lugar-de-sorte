@@ -1,0 +1,28 @@
+package control;
+import java.util.List;
+
+public class ControleSistemaCliente implements ISistemaCliente{
+    
+    // Lembrar de usar @Override
+    public String[] estabelecimentosProximos(){
+        return new String[0];
+    }
+
+    public Bilhete comprarBilhetes(){
+        return new Bilhete();  
+    }
+
+    public Bilhete avaliacaoEmpresa(){
+        return new Bilhete();  
+
+    }
+
+    public void historicoSorteios(){
+        
+    }
+
+    public void acessarDados(){
+
+    }
+
+}

@@ -1,0 +1,33 @@
+package control;
+import java.util.List;
+
+public class ControleSistemaEmpresa implements ISistemaEmpresa{
+    
+    // Lembrar de usar @Override
+    public void excluirSorteio(){
+
+    }
+
+    public void verificarInscritos(){
+
+    }
+
+    public boolean verificarParticipante(Cliente cliente){
+        return true;
+
+    }
+
+    public List<Cliente> participantes(){
+        // Lógica para obter os participantes
+        return null;  // Exemplo de retorno
+    }
+
+    public void criarSorteio(){
+
+    }
+
+    public void cadastrarResultado(){
+
+    }
+
+}
