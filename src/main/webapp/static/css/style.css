@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Alegraya Sans Black";
+  src: url(../fonts/AlegreyaSans-Black.ttf);
+}
+
+@font-face {
+  font-family: "Assistant Regular";
+  src: url(../fonts/Assistant-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #f3fad3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#logo {
+  max-width: 100%;
+  height: auto;
+}
+
+#titulo-da-pagina {
+  font-family: "Alegraya Sans Black", sans-serif;
+  color: #051e0e;
+  margin: 10px 5px;
+  font-size: 2em;
+}
+
+.link-botao {
+  font-family: "Assistant Regular", sans-serif;
+  text-decoration: none;
+  color: #000000;
+  background-color: #d9d9d9;
+  padding: 5px 15px 5px 15px;
+  margin: 30px 5px;
+  border-radius: 15px;
+  font-size: 1.2em;
+}
+
+#conteiner-de-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
