@@ -1,0 +1,37 @@
+body, main, div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: #f3fad3;
+}
+
+main {
+  flex-direction: column;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  margin: 10px 5px;
+  font-family: "Alegraya Sans Black", sans-serif;
+  color: #051e0e;
+  font-size: 2em;
+}
+
+a {
+  margin: 30px 5px;
+  padding: 5px 15px 5px 15px;
+  font-family: "Assistant Regular", sans-serif;
+  text-decoration: none;
+  color: #000000;
+  background-color: #d9d9d9;
+  font-size: 1.2em;
+  border-radius: 15px;
+}
