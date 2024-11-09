@@ -2,7 +2,9 @@ package model;
 import java.util.Date;
 
 public class Bilhete {
+    //talvez precise alterar para public, testar depois
     private String codigo;
+    private Cliente cliente;
 	private Date dataDoSorteio;
 	private float precoBilhete;
 	private String premio;

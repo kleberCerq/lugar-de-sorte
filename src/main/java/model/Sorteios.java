@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Sorteios{
+    //talvez precise alterar para public, testar depois
 	private Date dataCriacao;
 	private Date dataRealizacao;
     private boolean status;

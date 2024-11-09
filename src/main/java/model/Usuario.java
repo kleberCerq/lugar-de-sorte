@@ -1,11 +1,12 @@
 package model;
 
 public abstract class Usuario {
+    //talvez precise alterar para public, testar depois
 	private String nome;
 	private  String senha;
     private String email;
     private String endereco;   
-	private Sorteios listaSorteios;
+	private ArrayList<Sorteios> listaSorteios;
     private int numeroTelefone;
 	
 
