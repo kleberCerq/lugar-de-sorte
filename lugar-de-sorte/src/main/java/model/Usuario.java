@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public abstract class Usuario {
     //talvez precise alterar para public, testar depois
@@ -9,13 +8,12 @@ public abstract class Usuario {
 	private  String senha;
     private String email;
     private String endereco;   
-	private List<Sorteios> listaSorteios = new ArrayList<>();
-
-    private int numeroTelefone;
+	private ArrayList<Sorteios> listaSorteios;
+    private float numeroTelefone;
 	
 
     // Construtor
-    public Usuario(String nome, String senha, String email, String endereco, int numeroTelefone) {
+    public Usuario(String nome, String senha, String email, String endereco, float numeroTelefone) {
         this.nome = nome;
         this.senha = senha;
         this.email = email;
@@ -57,7 +55,7 @@ public abstract class Usuario {
         this.endereco = endereco;
     }
 
-    public int getNumeroTelefone() {
+    public float getNumeroTelefone() {
         return numeroTelefone;
     }
 
@@ -65,12 +63,11 @@ public abstract class Usuario {
         this.numeroTelefone = numeroTelefone;
     }
 
-    // Get e set da lista de sorteios
-    public List<Sorteios> getListaSorteios() {
-        return listaSorteios;
-    }
+    public ArrayList<Sorteios> getListaSorteios() {
+    return listaSorteios;
+}
 
-    public void setListaSorteios(List<Sorteios> listaSorteios) {
+    public void setListaSorteios(ArrayList<Sorteios> listaSorteios) {
         this.listaSorteios = listaSorteios;
     }
 }

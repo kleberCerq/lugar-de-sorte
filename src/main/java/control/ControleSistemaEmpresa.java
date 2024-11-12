@@ -1,70 +1,78 @@
 package control;
+import java.util.ArrayList;
 import java.util.List;
 
-import model.Usuario;
-import model.Bilhetes;
+import model.Bilhete;
 import model.Cliente;
+import model.Sorteios;
+import model.Usuario;
+import view.TelaCriarSorteio;
+
 
 public class ControleSistemaEmpresa implements ISistemaEmpresa{
-    
     @Override
     public void excluirSorteio(Usuario usuario, Sorteios sorteio){
         //verificar se esta funcionado
-        ArrayList<Sorteios> listaSor = usuario.listaSorteios;
+        List<Sorteios> listaSor = usuario.getListaSorteios();
+
         for (int i =0; i < listaSor.size(); i++){
-            Sorteios s = ListaSor.get(i);
+            Sorteios s = listaSor.get(i);
             //testar se o codigo abaixo esta comparando os endereços e se da certo usar isso.
-            if(s = sorteio){
-                usuario.listaSorteios.remove(s);
+            if (s.equals(sorteio)) {
+                listaSor.remove(s);
                 break;
             }
         }
     }
+
     @Override
     public void verificarInscritos(Sorteios sorteios){
         //verificar se esta funcionando
-        ArrayList<Client> clie = participantes(sorteios);
+        List<Cliente> clie = participantes(sorteios);
+        
         for(int i = 0; i < clie.size(); i++){
-            System.out.print(clie.get(i).nome() + " esta presente\n");            
+            System.out.print(clie.get(i).getNome() + " está inscrito\n");            
         }
     }
 
     @Override
     public boolean verificarParticipante(Cliente cliente, Sorteios sorteios){
         //verificar se esta funcionando
-        ArrayList<Client> clie = participantes(sorteios);
-        for(int i = 0; i < clie.size(); i++){
-            Cliente c = clie.get(i);
-            if (cliente = c){
-                System.out.print(clie.get(i).nome() + " esta presente\n");
-                break;
+       List<Cliente> clie = participantes(sorteios);
+       
+       for (Cliente c : clie) {
+        if (cliente.equals(c)) {
+            //System.out.print(c.getNome() + " está presente\n");
+            return true;
             }
         }
-
+        return false;
     }
 
     @Override
-    public List<Cliente> participantes(Sorteios sorteios){
-        //verificar se esta funcionando
-        ArrayList<Bilhetes> bilhetes = sorteios.meusBilhetes();
-        List<Cliente> client = new ArrayList<Cliente>();
-        //esta retornando valores de usuarios repetidos caso eles possuam mais de um bilhete
-        for(int i = 0; i < bilhetes.size(); i++){
-            client.add(new Cliente(bilhetes.usuario));
-        }
-        // Lógica para obter os participantes
-        return client;  // Exemplo de retorno
+    public List<Cliente> participantes(Sorteios sorteios) {
+    List<Bilhete> bilhetes = sorteios.getMeusBilhetes(); // Altere para List<Bilhete>
+    List<Cliente> client = new ArrayList<>();
+
+    // Itera sobre cada bilhete para acessar o usuário
+    for (Bilhete bilhete : bilhetes) {
+        client.add(bilhete.getCliente());  // Adiciona o usuário associado ao bilhete
+    }
+
+        return client;  
     }
 
     @Override
     public void criarSorteio(){
-
+        // Exibe a tela para o usuário preencher os dados do sorteio
+        new TelaCriarSorteio().setVisible(true);
     }
-
+    
     @Override
-    public void cadastrarResultado(Sorteios sorteios, string codigo){
+    public void cadastrarResultado(Sorteios sorteios, String codigo){
         //verificar se funciona
-        sorteios.bilheteSorteado = codigo;
+        sorteios.setBilheteSorteado(codigo);   
+        System.out.println("Resultado do sorteio cadastrado: " );
     }
 
 }

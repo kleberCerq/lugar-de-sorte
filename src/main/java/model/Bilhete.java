@@ -52,4 +52,14 @@ public class Bilhete {
     public void setCpfCliente(String cpfCliente) {
         this.cpfCliente = cpfCliente;
     }
+
+      // Método para acessar o cliente associado ao bilhete
+      public Cliente getCliente() {
+        return cliente;
+    }
+
+    // Se necessário, método para definir o cliente
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 }

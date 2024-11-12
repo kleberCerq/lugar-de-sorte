@@ -12,7 +12,7 @@ public class Sorteios{
 	private String empresaDona;
 	private String premio;
 	private List<Bilhete> meusBilhetes;
-
+    private String descricao;  // A variável que armazenará a descrição
 
 
      // Getters e Setters
@@ -71,4 +71,14 @@ public class Sorteios{
     public void setMeusBilhetes(List<Bilhete> meusBilhetes) {
         this.meusBilhetes = meusBilhetes;
     }    
+ 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    
 }
