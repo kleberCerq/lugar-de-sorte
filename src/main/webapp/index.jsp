@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -13,8 +14,8 @@
       <img src="static/img/logo.png" alt="Logo Lugar de Sorte" />
       <h1>lugar de sorte</h1>
       <div>
-        <a href="WEB-INF/views/login.html">ENTRAR</a>
-        <a href="WEB-INF/views/cadastro.html">CADASTRAR-SE</a>
+        <a href="/login">ENTRAR</a>
+        <a href="/cadastro">CADASTRAR-SE</a>
       </div>
     </main>
   </body>

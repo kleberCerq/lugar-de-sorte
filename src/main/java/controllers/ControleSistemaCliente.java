@@ -1,8 +1,8 @@
-package control;
+package controllers;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Bilhete;
+import models.Bilhete;
 
 public class ControleSistemaCliente implements ISistemaCliente{
     

@@ -1,11 +1,11 @@
 body, main, div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; /* autenticacao */
+  align-items: center; /* autenticacao */
+  justify-content: center; /* autenticacao */
 }
 
 body {
-  background-color: #f3fad3;
+  background-color: #f3fad3; /* autenticacao */
 }
 
 main {
@@ -20,7 +20,7 @@ img {
 
 h1 {
   margin: 10px 5px;
-  font-family: "Alegraya Sans Black", sans-serif;
+  font-family: "Alegraya Sans Black", Arial, sans-serif; /* autenticacao */
   color: #051e0e;
   font-size: 2em;
 }
@@ -28,9 +28,9 @@ h1 {
 a {
   margin: 30px 5px;
   padding: 5px 15px 5px 15px;
-  font-family: "Assistant Regular", sans-serif;
+  font-family: "Assistant Regular", Arial, sans-serif;
   text-decoration: none;
-  color: #000000;
+  color: #000000; /* autenticacao */
   background-color: #d9d9d9;
   font-size: 1.2em;
   border-radius: 15px;

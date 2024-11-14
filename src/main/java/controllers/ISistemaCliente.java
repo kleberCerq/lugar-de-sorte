@@ -1,7 +1,7 @@
-package control;
+package controllers;
 import java.util.List;
 
-import model.Bilhete;
+import models.Bilhete;
 
 public interface ISistemaCliente {
     

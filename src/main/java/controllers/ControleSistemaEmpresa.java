@@ -1,12 +1,11 @@
-package control;
+package controllers;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Bilhete;
-import model.Cliente;
-import model.Sorteios;
-import model.Usuario;
-//import view.TelaCriarSorteio;
+import models.Bilhete;
+import models.Cliente;
+import models.Sorteios;
+import models.Usuario;
 
 
 public class ControleSistemaEmpresa implements ISistemaEmpresa{

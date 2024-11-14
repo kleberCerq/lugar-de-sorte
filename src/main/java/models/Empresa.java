@@ -1,4 +1,4 @@
-package model;
+package models;
 
 public class Empresa extends Usuario {
     private String cnpj;

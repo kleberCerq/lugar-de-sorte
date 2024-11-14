@@ -1,10 +1,10 @@
-package control;
+package controllers;
 
 import java.util.List;
 
-import model.Cliente;
-import model.Sorteios;
-import model.Usuario;
+import models.Cliente;
+import models.Sorteios;
+import models.Usuario;
 
 public interface ISistemaEmpresa {
     public void excluirSorteio(Usuario usuario, Sorteios sorteio);
