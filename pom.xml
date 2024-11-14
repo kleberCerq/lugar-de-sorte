@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.lugar-de-sorte</groupId>
     <artifactId>lugar-de-sorte</artifactId>
     <version>1.0.0</version>
-    <packaging>war</packaging>
     <name>Lugar de Sorte - Aplicação web de sorteios</name>
     <url>https://github.com/kleberCerq/lugar-de-sorte</url>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
     </properties>
-
+    
     <dependencies>
         <dependency>
             <groupId>jakarta.servlet</groupId>
@@ -30,18 +26,9 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
         </dependency>
-        <dependency>
-            <groupId>com.toedter</groupId>
-            <artifactId>jcalendar</artifactId>
-            <version>1.4</version>
-            
-</dependency>
-
     </dependencies>
-
     <build>
         <finalName>lugar-de-sorte</finalName>
-
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -64,9 +51,6 @@
                     <artifactId>jetty-maven-plugin</artifactId>
                     <version>11.0.24</version>
                 </plugin>
-
-                
-
             </plugins>
         </pluginManagement>
     </build>

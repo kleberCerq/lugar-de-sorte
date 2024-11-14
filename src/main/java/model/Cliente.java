@@ -6,7 +6,6 @@ public class Cliente extends Usuario {
         super(nome, senha, email, endereco, numeroTelefone);  // Chama o construtor da classe pai
         this.cpf = cpf;
     }
-
     
     // Getters e Setters
     public String getCpf() {

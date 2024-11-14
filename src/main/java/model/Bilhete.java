@@ -11,7 +11,6 @@ public class Bilhete {
     private String cpfCliente;
 
 
-
      // Getters e Setters
      public String getCodigo() {
         return codigo;

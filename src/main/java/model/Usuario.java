@@ -11,8 +11,7 @@ public abstract class Usuario {
     private String endereco;   
 	private List<Sorteios> listaSorteios = new ArrayList<>();
 
-    private int numeroTelefone;
-	
+    private int numeroTelefone;	
 
     // Construtor
     public Usuario(String nome, String senha, String email, String endereco, int numeroTelefone) {

@@ -6,7 +6,7 @@ import model.Bilhete;
 import model.Cliente;
 import model.Sorteios;
 import model.Usuario;
-import view.TelaCriarSorteio;
+//import view.TelaCriarSorteio;
 
 
 public class ControleSistemaEmpresa implements ISistemaEmpresa{
@@ -65,7 +65,7 @@ public class ControleSistemaEmpresa implements ISistemaEmpresa{
     @Override
     public void criarSorteio(){
         // Exibe a tela para o usuário preencher os dados do sorteio
-        new TelaCriarSorteio().setVisible(true);
+      //  new TelaCriarSorteio().setVisible(true);
     }
     
     @Override
