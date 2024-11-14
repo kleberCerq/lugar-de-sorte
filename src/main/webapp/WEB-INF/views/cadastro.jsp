@@ -15,12 +15,11 @@
     <main>
       <div id="title-container">
         <h1>Conta</h1>
-        <span class="material-symbols-outlined">person</span>
       </div>
 
       <p>cadastro</p>
 
-      <form action="/novocadastro" method="post">
+      <form action="/novoCadastro" method="post">
         <div class="input-container">
           <input id="name" name="name" type="text" placeholder="NOME" />
           <input id="cpf" name="cpf" type="text" placeholder="CPF" maxlength="14" oninput="mascaraCPF(event)" required />
