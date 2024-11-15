@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../static/css/autenticacao.css" />
     <script src="../../static/js/trocarInput.js" defer></script>
     <script src="../../static/js/formatarInput.js" defer></script>
+    <script src="../../static/js/validarInput.js" defer></script>
     <title>Login - Lugar de Sorte</title>
   </head>
   <body>
@@ -19,10 +20,10 @@
 
       <p>login</p>
 
-      <form action="/novologin" method="post">
+      <form id="formulario" action="/novologin" method="post">
         <div class="input-container">
-          <input id="cpf" class="input-login" name="cpf" type="text" placeholder="CPF" maxlength="14" oninput="mascaraCPF(event)" required />
-          <input id="cnpj" class="hidden input-login" name="cnpj" type="text" placeholder="CNPJ" maxlength="18" oninput="mascaraCNPJ(event)" />
+          <input id="cpf" class="input-login" name="cpf" type="text" placeholder="CPF" maxlength="14" required />
+          <input id="cnpj" class="hidden input-login" name="cnpj" type="text" placeholder="CNPJ" maxlength="18" />
         </div>
 
         <div class="button-container">

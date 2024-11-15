@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../static/css/autenticacao.css" />
     <script src="../../static/js/trocarInput.js" defer></script>
     <script src="../../static/js/formatarInput.js" defer></script>
+    <script src="../../static/js/validarInput.js" defer></script>
     <title>Cadastro - Lugar de Sorte</title>
   </head>
   <body>
@@ -19,11 +20,11 @@
 
       <p>cadastro</p>
 
-      <form action="/novoCadastro" method="post">
+      <form id="formulario" action="/novoCadastro" method="post">
         <div class="input-container">
-          <input id="name" name="name" type="text" placeholder="NOME" />
-          <input id="cpf" name="cpf" type="text" placeholder="CPF" maxlength="14" oninput="mascaraCPF(event)" required />
-          <input id="cnpj" class="hidden" name="cnpj" type="text" placeholder="CNPJ" maxlength="18" oninput="mascaraCNPJ(event)" />
+          <input id="name" name="name" type="text" placeholder="NOME" minlength="2" required />
+          <input id="cpf" name="cpf" type="text" placeholder="CPF" maxlength="14" required />
+          <input id="cnpj" class="hidden" name="cnpj" type="text" placeholder="CNPJ" maxlength="18" />
         </div>
 
         <div class="button-container">
@@ -32,8 +33,8 @@
         </div>
 
         <div class="input-container">
-          <input id="email" name="email" type="email" placeholder="E-MAIL" />
-          <input id="password" name="password" type="password" placeholder="SENHA" />
+          <input id="email" name="email" type="email" placeholder="E-MAIL" minlength="5" required />
+          <input id="password" name="password" type="password" placeholder="SENHA" minlength="5" required />
         </div>
 
         <div class="button-container">
