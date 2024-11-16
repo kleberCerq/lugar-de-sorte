@@ -10,7 +10,14 @@ public class Bilhete {
 	private String premio;
     private String cpfCliente;
 
-
+    public Bilhete(String codigo, Cliente cliente, Date dataDoSorteio, float precoBilhete, String premio, String cpfCliente){
+        this.codigo = codigo;
+        this.cliente = cliente;
+        this.dataDoSorteio = dataDoSorteio;
+        this.precoBilhete = precoBilhete;
+        this.premio = premio;
+        this.cpfCliente = cpfCliente;
+    }
      // Getters e Setters
      public String getCodigo() {
         return codigo;

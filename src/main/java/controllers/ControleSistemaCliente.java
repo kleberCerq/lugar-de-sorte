@@ -1,8 +1,10 @@
 package controllers;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import models.Bilhete;
+import models.Cliente;
 
 public class ControleSistemaCliente implements ISistemaCliente{
     
@@ -16,8 +18,8 @@ public class ControleSistemaCliente implements ISistemaCliente{
     }
 
     @Override
-    public Bilhete comprarBilhetes(){
-        return new Bilhete();  
+    public Bilhete comprarBilhetes(String codigo, Cliente cliente, Date dataDoSorteio, float precoBilhete, String premio, String cpfCliente){
+        return new Bilhete(codigo, cliente, dataDoSorteio, precoBilhete, premio, cpfCliente);  
     }
 
     @Override
