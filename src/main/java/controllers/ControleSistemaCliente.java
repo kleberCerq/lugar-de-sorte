@@ -33,8 +33,9 @@ public class ControleSistemaCliente implements ISistemaCliente{
     @Override
     public void historicoSorteios(Cliente cliente){
         ArrayList<Bilhete> b = cliente.getBilhetes();
-        for (int i = 0; i < b.size()-1; i++) {
-            
+        ArrayList<Sorteio> s = new ArrayList<>();
+        for (int i = 0; i < b.size()-1; i++) {            
+            s.add(b.get(i).getSorteio());
         }
 
     }

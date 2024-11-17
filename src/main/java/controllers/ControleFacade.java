@@ -46,8 +46,8 @@ public class ControleFacade implements IFacade{
     }
 
     @Override
-    public void historicoSorteios(){
-        SistenClient.historicoSorteios();
+    public void historicoSorteios(Cliente cliente){
+        SistenClient.historicoSorteios(cliente);
     }
 
     @Override
