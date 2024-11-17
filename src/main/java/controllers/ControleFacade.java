@@ -20,6 +20,11 @@ public class ControleFacade implements IFacade{
 
     //ControleSistema
     @Override
+    public Usuario logarUsuario(String senha, String cpf, String cnpj){
+        return Sisten.logarUsuario(senha, cpf, cnpj);
+    }
+
+    @Override
     public Usuario cadastrarUsuario(String nome, String cpf, String cnpj, String email, String senha){
         return Sisten.cadastrarUsuario(nome, cpf, cnpj, email, senha);
     }
@@ -51,10 +56,10 @@ public class ControleFacade implements IFacade{
     }
     
     //ControleSistemaEmpresa
-    @Override
-    public void excluirSorteio(Usuario usuario, Sorteio sorteio){
-        SistenEmpresa.excluirSorteio(usuario, sorteio);
-    }
+    // @Override
+    // public void excluirSorteio(Usuario usuario, Sorteio sorteio){
+    //     SistenEmpresa.excluirSorteio(usuario, sorteio);
+    // }
 
     @Override
     public void verificarInscritos(Sorteio sorteios){
