@@ -2,6 +2,9 @@ package models;
 
 public abstract class Usuario {
     private String nome;
+    //talvez precise alterar para public, testar depois
+	private String nome;
+	private String senha;
     private String email;
     private String senha;
 

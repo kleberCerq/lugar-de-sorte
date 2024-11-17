@@ -1,6 +1,5 @@
 package controllers;
 
-import java.util.Date;
 import java.util.List;
 
 import models.Bilhete;
@@ -32,8 +31,8 @@ public class ControleFacade implements IFacade{
     }
 
     @Override
-    public Bilhete comprarBilhetes(String codigo, Cliente cliente, Date dataDoSorteio, float precoBilhete, String premio, String cpfCliente){
-        return SistenClient.comprarBilhetes(codigo, cliente, dataDoSorteio, precoBilhete, premio, cpfCliente);
+    public Bilhete comprarBilhetes(String codigo, Cliente cliente, float precoBilhete, String cpfCliente, Sorteios sorteio){
+        return SistenClient.comprarBilhetes(codigo, cliente, precoBilhete, cpfCliente, sorteio);
     }
 
     @Override
