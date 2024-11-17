@@ -4,7 +4,7 @@ import java.util.List;
 
 import models.Bilhete;
 import models.Cliente;
-import models.Sorteios;
+import models.Sorteio;
 import models.Usuario;
 
 public class ControleFacade implements IFacade{
@@ -20,8 +20,8 @@ public class ControleFacade implements IFacade{
 
     //ControleSistema
     @Override
-    public void cadastrarUsuario(String nome, String cpf, String cnpj, String email, String senha){
-        Sisten.cadastrarUsuario(nome, cpf, cnpj, email, senha);
+    public Usuario cadastrarUsuario(String nome, String cpf, String cnpj, String email, String senha){
+        return Sisten.cadastrarUsuario(nome, cpf, cnpj, email, senha);
     }
 
     //ControleSistemaCliente
@@ -52,22 +52,22 @@ public class ControleFacade implements IFacade{
     
     //ControleSistemaEmpresa
     @Override
-    public void excluirSorteio(Usuario usuario, Sorteios sorteio){
+    public void excluirSorteio(Usuario usuario, Sorteio sorteio){
         SistenEmpresa.excluirSorteio(usuario, sorteio);
     }
 
     @Override
-    public void verificarInscritos(Sorteios sorteios){
+    public void verificarInscritos(Sorteio sorteios){
         SistenEmpresa.verificarInscritos(sorteios);
     }
 
     @Override
-    public boolean verificarParticipante(Cliente cliente, Sorteios sorteios){
+    public boolean verificarParticipante(Cliente cliente, Sorteio sorteios){
         return SistenEmpresa.verificarParticipante(cliente, sorteios);
     }
 
     @Override
-    public List<Cliente> participantes(Sorteios sorteios){
+    public List<Cliente> participantes(Sorteio sorteios){
         return SistenEmpresa.participantes(sorteios);
     }
 
@@ -77,7 +77,7 @@ public class ControleFacade implements IFacade{
     }
 
     @Override
-    public void cadastrarResultado(Sorteios sorteios, String codigo){
+    public void cadastrarResultado(Sorteio sorteios, String codigo){
         SistenEmpresa.cadastrarResultado(sorteios, codigo);
     }
 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 import models.Bilhete;
 import models.Cliente;
-import models.Sorteios;
+import models.Sorteio;
 
 public class ControleSistemaCliente implements ISistemaCliente{
     

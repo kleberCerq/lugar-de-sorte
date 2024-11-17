@@ -4,18 +4,18 @@ import java.util.List;
 
 import models.Bilhete;
 import models.Cliente;
-import models.Sorteios;
+import models.Sorteio;
 import models.Usuario;
 
 
 public class ControleSistemaEmpresa implements ISistemaEmpresa{
     @Override
-    public void excluirSorteio(Usuario usuario, Sorteios sorteio){
+    public void excluirSorteio(Usuario usuario, Sorteio sorteio){
         //verificar se esta funcionado
-        List<Sorteios> listaSor = usuario.getListaSorteios();
+        List<Sorteio> listaSor = usuario.getListaSorteios();
 
         for (int i =0; i < listaSor.size(); i++){
-            Sorteios s = listaSor.get(i);
+            Sorteio s = listaSor.get(i);
             //testar se o codigo abaixo esta comparando os endereços e se da certo usar isso.
             if (s.equals(sorteio)) {
                 listaSor.remove(s);
@@ -25,7 +25,7 @@ public class ControleSistemaEmpresa implements ISistemaEmpresa{
     }
 
     @Override
-    public void verificarInscritos(Sorteios sorteios){
+    public void verificarInscritos(Sorteio sorteios){
         //verificar se esta funcionando
         List<Cliente> clie = participantes(sorteios);
         
@@ -35,7 +35,7 @@ public class ControleSistemaEmpresa implements ISistemaEmpresa{
     }
 
     @Override
-    public boolean verificarParticipante(Cliente cliente, Sorteios sorteios){
+    public boolean verificarParticipante(Cliente cliente, Sorteio sorteios){
         //verificar se esta funcionando
        List<Cliente> clie = participantes(sorteios);
        
@@ -49,7 +49,7 @@ public class ControleSistemaEmpresa implements ISistemaEmpresa{
     }
 
     @Override
-    public List<Cliente> participantes(Sorteios sorteios) {
+    public List<Cliente> participantes(Sorteio sorteios) {
     List<Bilhete> bilhetes = sorteios.getMeusBilhetes(); // Altere para List<Bilhete>
     List<Cliente> client = new ArrayList<>();
 
@@ -68,7 +68,7 @@ public class ControleSistemaEmpresa implements ISistemaEmpresa{
     }
     
     @Override
-    public void cadastrarResultado(Sorteios sorteios, String codigo){
+    public void cadastrarResultado(Sorteio sorteios, String codigo){
         //verificar se funciona
         sorteios.setBilheteSorteado(codigo);   
         System.out.println("Resultado do sorteio cadastrado: " );

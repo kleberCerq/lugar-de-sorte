@@ -7,7 +7,7 @@ public class Bilhete {
     private Cliente cliente;
 	private float precoBilhete;
     private String cpfCliente;
-    private Sorteios sorteio;
+    private Sorteio sorteio;
 
     public Bilhete(String codigo, Cliente cliente, float precoBilhete, String cpfCliente, Sorteios sorteio){
         this.codigo = codigo;
