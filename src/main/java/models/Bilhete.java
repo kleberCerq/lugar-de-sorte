@@ -9,7 +9,7 @@ public class Bilhete {
     private String cpfCliente;
     private Sorteio sorteio;
 
-    public Bilhete(String codigo, Cliente cliente, float precoBilhete, String cpfCliente, Sorteios sorteio){
+    public Bilhete(String codigo, Cliente cliente, float precoBilhete, String cpfCliente, Sorteio sorteio){
         this.codigo = codigo;
         this.cliente = cliente;
         this.precoBilhete = precoBilhete;

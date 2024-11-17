@@ -31,7 +31,7 @@ public class ControleFacade implements IFacade{
     }
 
     @Override
-    public Bilhete comprarBilhetes(String codigo, Cliente cliente, float precoBilhete, String cpfCliente, Sorteios sorteio){
+    public Bilhete comprarBilhetes(String codigo, Cliente cliente, float precoBilhete, String cpfCliente, Sorteio sorteio){
         return SistenClient.comprarBilhetes(codigo, cliente, precoBilhete, cpfCliente, sorteio);
     }
 

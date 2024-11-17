@@ -19,7 +19,7 @@ public class ControleSistemaCliente implements ISistemaCliente{
     }
 
     @Override
-    public Bilhete comprarBilhetes(String codigo, Cliente cliente, float precoBilhete, String cpfCliente, Sorteios sorteio){
+    public Bilhete comprarBilhetes(String codigo, Cliente cliente, float precoBilhete, String cpfCliente, Sorteio sorteio){
         return new Bilhete(codigo, cliente, precoBilhete, cpfCliente, sorteio);
     }
 
