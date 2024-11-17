@@ -1,5 +1,9 @@
 package controllers;
 
+import models.Usuario;
+
 public interface ISistema {
-	public void cadastrarUsuario(String nome, String cpf, String cnpj, String email, String senha);
+    public Usuario cadastrarUsuario(String nome, String email, String senha, String cpf, String cnpj);
+
+    public Usuario logarUsuario(String senha, String cpf, String cnpj);
 }

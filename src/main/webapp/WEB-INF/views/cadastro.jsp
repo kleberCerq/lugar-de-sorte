@@ -22,7 +22,7 @@
 
       <form id="formulario" action="/novoCadastro" method="post">
         <div class="input-container">
-          <input id="name" name="name" type="text" placeholder="NOME" minlength="2" required />
+          <input id="name" name="nome" type="text" placeholder="NOME" minlength="2" required />
           <input id="cpf" name="cpf" type="text" placeholder="CPF" maxlength="14" required />
           <input id="cnpj" class="hidden" name="cnpj" type="text" placeholder="CNPJ" maxlength="18" />
         </div>
@@ -34,7 +34,7 @@
 
         <div class="input-container">
           <input id="email" name="email" type="email" placeholder="E-MAIL" minlength="5" required />
-          <input id="password" name="password" type="password" placeholder="SENHA" minlength="5" required />
+          <input id="password" name="senha" type="password" placeholder="SENHA" minlength="5" required />
         </div>
 
         <div class="button-container">

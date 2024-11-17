@@ -3,18 +3,40 @@ package controllers;
 import java.sql.Connection;
 
 import dao.SistemaDAO;
+import models.Cliente;
+import models.Empresa;
+import models.Usuario;
 
 public class ControleSistema implements ISistema {
-	@Override
-	public void cadastrarUsuario(String nome, String cpf, String cnpj, String email, String senha) {
-		Connection connection = DBConnection.getConnection();
+    public Connection conn;
+    public SistemaDAO dao;
 
-		SistemaDAO dao = new SistemaDAO(connection);
+    public ControleSistema() {
+        this.conn = DBConnection.getConnection();
+        this.dao = new SistemaDAO(conn);
+    }
 
-		if (cpf.length() > 0) {
-			dao.adicionarCliente(nome, cpf, email, senha);
+    @Override
+    public Usuario cadastrarUsuario(String nome, String email, String senha, String cpf, String cnpj) {
+        if (cpf.length() > 0) {
+			Cliente novoCliente = new Cliente(nome, email, senha, cpf);
+			dao.setCliente(novoCliente);
+            return novoCliente;
 		} else {
-			dao.adicionarEmpresa(nome, cnpj, email, senha);
+			Empresa novaEmpresa = new Empresa(nome, email, senha, cnpj);
+			dao.setEmpresa(novaEmpresa);
+            return novaEmpresa;
 		}
-	}
+    }
+
+    @Override
+    public Usuario logarUsuario(String senha, String cpf, String cnpj) {
+        if (cpf.length() > 0) {
+            Cliente resultado = dao.getCliente(senha, cpf);
+            return resultado;
+        } else {
+            Empresa resultado = dao.getEmpresa(senha, cnpj);
+            return resultado;
+        }
+    }
 }

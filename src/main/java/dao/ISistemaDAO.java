@@ -1,7 +1,14 @@
 package dao;
 
-public interface ISistemaDAO {
-    public void adicionarCliente(String nome, String cnpj, String email, String senha);
+import models.Cliente;
+import models.Empresa;
 
-    public void adicionarEmpresa(String nome, String cpf, String email, String senha);
+public interface ISistemaDAO {
+    public void setCliente(Cliente cliente);
+
+    public Cliente getCliente(String senha, String cpf);
+
+    public void setEmpresa(Empresa empresa);
+
+    public Empresa getEmpresa(String senha, String cnpj);
 }

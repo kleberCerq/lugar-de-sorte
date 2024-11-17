@@ -20,7 +20,7 @@
 
       <p>login</p>
 
-      <form id="formulario" action="/novologin" method="post">
+      <form id="formulario" action="/novoLogin" method="post">
         <div class="input-container">
           <input id="cpf" class="input-login" name="cpf" type="text" placeholder="CPF" maxlength="14" required />
           <input id="cnpj" class="hidden input-login" name="cnpj" type="text" placeholder="CNPJ" maxlength="18" />
@@ -32,8 +32,12 @@
         </div>
 
         <div class="input-container">
-          <input id="password" class="input-login" name="password" type="password" placeholder="SENHA" />
+          <input id="password" class="input-login" name="senha" type="password" placeholder="SENHA" />
         </div>
+
+        <% if (request.getAttribute("errorMessage") != null) { %>
+        <p style="color: red"><%= request.getAttribute("errorMessage") %></p>
+        <% } %><br />
 
         <div class="button-container">
           <button type="submit">APAGAR</button>
