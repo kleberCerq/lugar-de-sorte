@@ -6,7 +6,7 @@ import java.util.List;
 public abstract class Usuario {
     //talvez precise alterar para public, testar depois
 	private String nome;
-	private  String senha;
+	private String senha;
     private String email;
     private String endereco;   
 	private List<Sorteios> listaSorteios = new ArrayList<>();

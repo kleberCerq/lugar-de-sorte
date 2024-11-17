@@ -5,6 +5,7 @@ import java.util.List;
 
 import models.Bilhete;
 import models.Cliente;
+import models.Sorteios;
 
 public class ControleSistemaCliente implements ISistemaCliente{
     
@@ -18,8 +19,8 @@ public class ControleSistemaCliente implements ISistemaCliente{
     }
 
     @Override
-    public Bilhete comprarBilhetes(String codigo, Cliente cliente, Date dataDoSorteio, float precoBilhete, String premio, String cpfCliente){
-        return new Bilhete(codigo, cliente, dataDoSorteio, precoBilhete, premio, cpfCliente);  
+    public Bilhete comprarBilhetes(String codigo, Cliente cliente, float precoBilhete, String cpfCliente, Sorteios sorteio){
+        return new Bilhete(codigo, cliente, precoBilhete, cpfCliente, sorteio);
     }
 
     @Override
@@ -28,6 +29,7 @@ public class ControleSistemaCliente implements ISistemaCliente{
         System.out.println("Avaliação da empresa realizada.");
     }
 
+    //conversar com o kleber
     @Override
     public void historicoSorteios(){
         

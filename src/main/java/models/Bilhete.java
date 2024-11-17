@@ -5,18 +5,16 @@ public class Bilhete {
     //talvez precise alterar para public, testar depois
     private String codigo;
     private Cliente cliente;
-	private Date dataDoSorteio;
 	private float precoBilhete;
-	private String premio;
     private String cpfCliente;
+    private Sorteios sorteio;
 
-    public Bilhete(String codigo, Cliente cliente, Date dataDoSorteio, float precoBilhete, String premio, String cpfCliente){
+    public Bilhete(String codigo, Cliente cliente, float precoBilhete, String cpfCliente, Sorteios sorteio){
         this.codigo = codigo;
         this.cliente = cliente;
-        this.dataDoSorteio = dataDoSorteio;
         this.precoBilhete = precoBilhete;
-        this.premio = premio;
         this.cpfCliente = cpfCliente;
+        this.sorteio = sorteio;
     }
      // Getters e Setters
      public String getCodigo() {
@@ -28,12 +26,13 @@ public class Bilhete {
     }
 
     public Date getDataDoSorteio() {
-        return dataDoSorteio;
+        return sorteio.getDataRealizacao();
     }
 
-    public void setDataDoSorteio(Date dataDoSorteio) {
-        this.dataDoSorteio = dataDoSorteio;
-    }
+    //                         acho que não tem necessidade poder alterar a data do sorteio
+    //public void setDataDoSorteio(Date dataDoSorteio) {
+    //    this.dataDoSorteio = dataDoSorteio;
+    //}
 
     public float getPrecoBilhete() {
         return precoBilhete;
@@ -43,12 +42,12 @@ public class Bilhete {
         this.precoBilhete = precoBilhete;
     }
 
-    public String getPremio() {
-        return premio;
+    public void getPremio() {
+        System.out.printf("O premio é: %s",sorteio.getPremio());
     }
 
     public void setPremio(String premio) {
-        this.premio = premio;
+        this.sorteio.setPremio(premio);
     }
 
     public String getCpfCliente() {
