@@ -67,4 +67,7 @@ public class Bilhete {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
+    public Sorteio getSorteio(){
+        return sorteio;
+    }
 }

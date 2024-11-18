@@ -10,7 +10,7 @@ public abstract class Usuario {
         this.email = email;
         this.senha = senha;
     }
-
+    
     public void setNome(String nome) {
         this.nome = nome;
     }
