@@ -5,25 +5,9 @@ import java.util.List;
 import models.Bilhete;
 import models.Cliente;
 import models.Sorteio;
-import models.Empresa;
 
 
 public class ControleSistemaEmpresa implements ISistemaEmpresa{
-    //                            talvez valha mais a pena apagala
-    // @Override
-    // public void excluirSorteio(Empresa empresa, Sorteio sorteio){
-    //     //verificar se esta funcionado
-    //     List<Sorteio> listaSor = empresa.getListaSorteios();
-
-    //     for (int i =0; i < listaSor.size(); i++){
-    //         Sorteio s = listaSor.get(i);
-    //         //testar se o codigo abaixo esta comparando os endereços e se da certo usar isso.
-    //         if (s.equals(sorteio)) {
-    //             listaSor.remove(s);
-    //             break;
-    //         }
-    //     }
-    // }
 
     @Override
     public void verificarInscritos(Sorteio sorteios){

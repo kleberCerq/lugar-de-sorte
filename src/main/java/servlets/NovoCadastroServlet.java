@@ -2,7 +2,7 @@ package servlets;
 
 import java.io.IOException;
 
-import controllers.ControleSistema;
+import controllers.ControleFacade;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -22,7 +22,7 @@ public class NovoCadastroServlet extends HttpServlet {
         String cpf = request.getParameter("cpf");
         String cnpj = request.getParameter("cnpj");
 
-        ControleSistema controle = new ControleSistema();
+        ControleFacade controle = new ControleFacade();
         Usuario usuario = controle.cadastrarUsuario(nome, email, senha, cpf, cnpj);
 
         if (usuario instanceof Cliente) {

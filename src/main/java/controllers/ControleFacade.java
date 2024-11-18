@@ -12,10 +12,10 @@ public class ControleFacade implements IFacade{
     protected ControleSistemaCliente SistenClient;
     protected ControleSistemaEmpresa SistenEmpresa;
 
-    public ControleFacade(ControleSistema Sisten, ControleSistemaCliente SistenClient, ControleSistemaEmpresa SistenEmpresa){
-        this.Sisten = Sisten;
-        this.SistenClient = SistenClient;
-        this.SistenEmpresa = SistenEmpresa;
+    public ControleFacade(){
+        this.Sisten = new ControleSistema();
+        this.SistenClient = new ControleSistemaCliente();
+        this.SistenEmpresa = new ControleSistemaEmpresa();
     }
 
     //ControleSistema
@@ -54,12 +54,6 @@ public class ControleFacade implements IFacade{
     public void acessarDados(){
         SistenClient.acessarDados();
     }
-    
-    //ControleSistemaEmpresa
-    // @Override
-    // public void excluirSorteio(Usuario usuario, Sorteio sorteio){
-    //     SistenEmpresa.excluirSorteio(usuario, sorteio);
-    // }
 
     @Override
     public void verificarInscritos(Sorteio sorteios){
