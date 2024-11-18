@@ -29,30 +29,13 @@ public class ControleFacade implements IFacade{
         return Sisten.cadastrarUsuario(nome, cpf, cnpj, email, senha);
     }
 
-    //ControleSistemaCliente
-    @Override
-    public List<String> estabelecimentosProximos(){
-        return SistenClient.estabelecimentosProximos();
-    }
-
     @Override
     public Bilhete comprarBilhetes(String codigo, Cliente cliente, float precoBilhete, String cpfCliente, Sorteio sorteio){
         return SistenClient.comprarBilhetes(codigo, cliente, precoBilhete, cpfCliente, sorteio);
     }
-
-    @Override
-    public void avaliacaoEmpresa(){
-        SistenClient.avaliacaoEmpresa();
-    }
-
     @Override
     public void historicoSorteios(Cliente cliente){
         SistenClient.historicoSorteios(cliente);
-    }
-
-    @Override
-    public void acessarDados(){
-        SistenClient.acessarDados();
     }
 
     @Override

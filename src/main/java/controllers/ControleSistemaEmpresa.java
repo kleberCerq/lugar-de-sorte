@@ -20,9 +20,9 @@ public class ControleSistemaEmpresa implements ISistemaEmpresa{
     }
 
     @Override
-    public boolean verificarParticipante(Cliente cliente, Sorteio sorteios){
+    public boolean verificarParticipante(Cliente cliente, Sorteio sorteio){
         //verificar se esta funcionando
-       List<Cliente> clie = participantes(sorteios);
+       List<Cliente> clie = participantes(sorteio);
        
        for (Cliente c : clie) {
         if (cliente.equals(c)) {
@@ -34,8 +34,8 @@ public class ControleSistemaEmpresa implements ISistemaEmpresa{
     }
 
     @Override
-    public List<Cliente> participantes(Sorteio sorteios) {
-    List<Bilhete> bilhetes = sorteios.getMeusBilhetes(); // Altere para List<Bilhete>
+    public List<Cliente> participantes(Sorteio sorteio) {
+    List<Bilhete> bilhetes = sorteio.getMeusBilhetes(); // Altere para List<Bilhete>
     List<Cliente> client = new ArrayList<>();
 
     // Itera sobre cada bilhete para acessar o usuário
@@ -54,10 +54,10 @@ public class ControleSistemaEmpresa implements ISistemaEmpresa{
     }
     
     @Override
-    public void cadastrarResultado(Sorteio sorteios, String codigo){
+    public void cadastrarResultado(Sorteio sorteio, String codigo){
         //verificar se funciona
-        sorteios.setBilheteSorteado(codigo);   
-        System.out.println("Resultado do sorteio cadastrado: " );
+        sorteio.setBilheteSorteado(codigo);   
+        System.out.println("Resultado do sorteio cadastrado: ");
     }
 
 }
