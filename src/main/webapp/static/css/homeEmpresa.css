@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5ffcb;
+  font-family: Arial, sans-serif;
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  background-color: #11562a;
+  padding: 10px;
+  overflow: auto;
+}
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  color: #f5ffcb;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: relative;
+  background-color: #11562a;
+  white-space: nowrap;
+}
+.breadcrumb-item:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.breadcrumb-item:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.breadcrumb-item:not(:last-child):after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 15px solid #11562a;
+  z-index: 1;
+}
+.breadcrumb-item:not(:last-child):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 15px solid #f5ffcb;
+  z-index: 0;
+}
+.breadcrumb-item i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.breadcrumb-item:hover {
+  background-color: #c9e265;
+  color: #11562a;
+}
+.breadcrumb-item:hover i {
+  color: #11562a;
+}
+
+/* Remover o sublinhado dos links no breadcrumb */
+.breadcrumb a {
+  text-decoration: none !important; /* Remove o sublinhado, com prioridade */
+  color: #f5ffcb !important; /* Mantém a cor do texto do link */
+}

@@ -1,0 +1,16 @@
+/* Altera a cor do botão btn-warning */
+.btn-warning {
+  background-color: #28a745 !important;
+  color: white !important;
+}
+
+.btn-warning editarBtn {
+  background-color: #28a745 !important;
+  color: white !important;
+}
+
+/* Se quiser algo específico para editarBtn */
+.editarBtn {
+  background-color: #28a745 !important;
+  color: white !important;
+}
