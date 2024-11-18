@@ -35,7 +35,7 @@ public class ControleSistemaCliente implements ISistemaCliente{
         ArrayList<Bilhete> b = cliente.getBilhetes();
         for (int i = 0; i < b.size()-1; i++) {    
             Sorteio s = b.get(i).getSorteio();
-            System.out.println("Sorteio realizado pela empresa: "+s.getEmpresaDona()+" Data: "+ s.getDataRealizacao()+" Premio: "+s.getPremio());            
+            System.out.println("Sorteio realizado pela empresa: "+s.getEmpresaDona()+" Data: "+ s.getDataRealizacao()+" Premio: "+s.getPremio()+" Numero do Bilhete: "+b.get(i).getCodigo());            
         }
     }
 
